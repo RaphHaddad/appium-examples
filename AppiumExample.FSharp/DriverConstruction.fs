@@ -4,9 +4,14 @@ open OpenQA.Selenium.Remote
 open OpenQA.Selenium.Appium.Windows
 open System
 
-type App = 
+type AppType = 
     | Calculator
     | Notepad
+
+type App = {
+    AppType: AppType
+    Driver: WindowsDriver<WindowsElement>
+}
 
 let constructDriver capability = 
     let desiredCapability = new DesiredCapabilities()
@@ -15,10 +20,10 @@ let constructDriver capability =
 
 let getAutomation app = 
     match app with
-    | Calculator -> constructDriver "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"
-    | Notepad -> constructDriver "C:\Windows\System32\notepad.exe"
+    | Calculator -> { Driver = constructDriver "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"; AppType = Calculator }
+    | Notepad -> { Driver = constructDriver @"C:\Windows\System32\notepad.exe"; AppType = Notepad }
 
-let closeApp app (driver:WindowsDriver<WindowsElement>) = 
-    match app with 
-    | Calculator -> driver.CloseApp()
-    | Notepad -> driver.CloseApp()
+let closeApp app = 
+    match app.AppType with 
+    | Calculator -> app.Driver.CloseApp()
+    | Notepad -> app.Driver.CloseApp()

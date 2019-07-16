@@ -1,7 +1,6 @@
 ﻿module CalculatorTests
 
 open DriverConstruction
-open OpenQA.Selenium.Appium.Windows
 open OpenQA.Selenium
 open Xunit
 
@@ -9,8 +8,8 @@ type Operator =
     | Multiply
     | Equals
 
-let clickButton name (calc:WindowsDriver<WindowsElement>) =
-    calc.FindElement(By.Name(name)).Click()
+let clickButton name calc =
+    calc.Driver.FindElement(By.Name(name)).Click()
     calc
 
 let clickNumber number calc = 
@@ -33,7 +32,7 @@ let clickOperator operator calc =
 
 let result calc = 
     clickOperator Equals calc |> ignore
-    (calc.FindElementByAccessibilityId "CalculatorResults").Text.Replace("Display is ","") |>
+    (calc.Driver.FindElementByAccessibilityId "CalculatorResults").Text.Replace("Display is ","") |>
     double
 
 [<Fact>]
@@ -46,4 +45,4 @@ let ``Does calculate 2 x 3`` () =
                  result
 
     Assert.Equal(6.0, result)
-    closeApp Calculator calc
+    closeApp calc
