@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppiumExample", "AppiumExample\AppiumExample.csproj", "{4EFB0DC1-4315-418E-AAFB-72F8121AA620}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AppiumExample.FSharp", "AppiumExample.FSharp\AppiumExample.FSharp.fsproj", "{97D53C1E-D6E5-4B35-A9BE-2A7EF2DB980A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AppiumExample.FSharp", "AppiumExample.FSharp\AppiumExample.FSharp.fsproj", "{9855A7A9-5E49-4F75-BB41-15ACD65724B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4EFB0DC1-4315-418E-AAFB-72F8121AA620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EFB0DC1-4315-418E-AAFB-72F8121AA620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EFB0DC1-4315-418E-AAFB-72F8121AA620}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97D53C1E-D6E5-4B35-A9BE-2A7EF2DB980A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97D53C1E-D6E5-4B35-A9BE-2A7EF2DB980A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97D53C1E-D6E5-4B35-A9BE-2A7EF2DB980A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97D53C1E-D6E5-4B35-A9BE-2A7EF2DB980A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9855A7A9-5E49-4F75-BB41-15ACD65724B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9855A7A9-5E49-4F75-BB41-15ACD65724B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9855A7A9-5E49-4F75-BB41-15ACD65724B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9855A7A9-5E49-4F75-BB41-15ACD65724B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,7 @@ open OpenQA.Selenium.Appium.Windows
 open OpenQA.Selenium
 open Xunit
 
-type operator = 
+type Operator = 
     | Multiply
     | Equals
 
