@@ -2,15 +2,16 @@
 
 open OpenQA.Selenium.Remote
 open OpenQA.Selenium.Appium.Windows
+open System
 
 type App = 
     | Calculator
     | Notepad
 
 let constructDriver capability = 
-    let capability = new DesiredCapabilities()
-    capability.SetCapability("app", @"C:\Windows\System32\notepad.exe")
-    new WindowsDriver<WindowsElement>(capability)
+    let desiredCapability = new DesiredCapabilities()
+    desiredCapability.SetCapability("app", capability)
+    new WindowsDriver<WindowsElement>(new Uri("http://127.0.0.1:4723/"), desiredCapability)
 
 let getAutomation app = 
     match app with
