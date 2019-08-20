@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="CustomUIApplication.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CustomUIApplication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid FocusVisualSecondaryBrush="#99FFFFFF" Background="White">
+        <Button Content="Validate" Margin="598,300,0,0" VerticalAlignment="Top" Height="35" Width="355" Click="Button_Click" Foreground="Black" Background="#330A0A0A" FocusVisualPrimaryBrush="Black" FocusVisualSecondaryBrush="#99FFFFFF"/>
+        <Slider HorizontalAlignment="Left" Margin="390,218,0,0" VerticalAlignment="Top" Width="770" Background="#66000000" FocusVisualSecondaryBrush="Black" FocusVisualPrimaryBrush="Black" BorderBrush="Black" Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="160,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="79" Width="1245" FontSize="48" FocusVisualPrimaryBrush="Black" FontFamily="Segoe UI" Foreground="Black"><Run Text="How awesome is UI testing"/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Page>
